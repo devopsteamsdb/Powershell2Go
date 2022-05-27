@@ -13,7 +13,7 @@ RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod
     apt-get install -y powershell
 
 WORKDIR /powershell
-COPY download_powershell_realses.ps1 download_powershell_realses.ps1
+COPY download_powershell_releases.ps1 download_powershell_releases.ps1
 
 ### Modules region
 
@@ -24,5 +24,5 @@ RUN pwsh -c Install-Module ImportExcel -Force
 
 
 
-RUN pwsh -f download_powershell_realses.ps1
+RUN pwsh -f download_powershell_releases.ps1
 RUN ["pwsh", "-command" ,"$env:PSModulePath.Split(':')"]
