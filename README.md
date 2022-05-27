@@ -1,12 +1,12 @@
 # Powershell2Go
 
 
-docker run --rm -it -v $(pwd):/mnt devopsteamsdb/devopsteamsdb:powershell2go_2022_05_26_19_31 /bin/bash
+docker run --rm -it -v $(pwd):/mnt devopsteamsdb/devopsteamsdb:powershell2go_latest /bin/bash
 
-to copy realse powershell
+to copy release powershell
 cp . /mnt/
 
-to find your downliad modules
+to find your downloaded modules
 
 pwsh
 
