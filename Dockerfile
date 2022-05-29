@@ -24,5 +24,5 @@ RUN pwsh -c Install-Module ImportExcel -Force
 
 
 
-RUN pwsh -f download_powershell_releases.ps1
+#RUN pwsh -f download_powershell_releases.ps1
 RUN ["pwsh", "-command" ,"$env:PSModulePath.Split(':')"]
