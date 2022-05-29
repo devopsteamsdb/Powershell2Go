@@ -2,7 +2,7 @@ $AllPowerShellReleases = Invoke-RestMethod https://api.github.com/repos/PowerShe
 
 foreach ($release in $AllPowerShellReleases)
 {
-  $PowershellVersion = $realse.tag_name.Substring(1) -as [version]
+  $PowershellVersion = $release.tag_name.Substring(1) -as [version]
   #$release.html_url
   if($release.name.Contains('preview'))  { continue }
   #$release.name
